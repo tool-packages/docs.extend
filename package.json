@@ -15,12 +15,13 @@
     "fix:md": "prettier --write \"./**/*.md\"",
     "preinstall": "node ./scripts/checkYarn.js",
     "baiduPush": "node ./scripts/baiduPush.js",
-    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "commit": "cz"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn changelog && git add ./CHANGELOG.md && lint-staged",
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn changelog && git add ./CHANGELOG.md && git commit -m \"chore: 更新日志\"",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },

@@ -31,5 +31,3 @@ footer: MIT Licensed | Copyright © 2020-present roshin
     <p>根据不同使用场景，选择适合场景的模块包安装。</p>
   </div>
 </div>
-
----
