@@ -1,0 +1,64 @@
+# workflow 的名称
+name: deploy
+
+# 触发 workflow 的条件
+on:
+  # push 事件或 pull_request 事件都可以触发 workflow, 仅限 master 分支
+  push:
+    branches: [ master ]
+    # paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
+    #   - README.md
+    #   - LICENSE
+  pull_request:
+    branches: [ master ]
+    # paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
+    #   - README.md
+    #   - LICENSE
+    
+  # 允许您从 "Actions" 选项卡手动运行此工作流
+  workflow_dispatch:
+
+jobs: # 工作流
+  deploy: # 自定义名称
+    # 指定运行所需要的虚拟机环境
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [10.x]
+        
+    steps: # 步骤
+      # 第一步：下载源码（CI/CD拉取代码到自己的本地）
+      - name: Checkout
+        uses: actions/checkout@master
+        
+      # 第二步：安装 nodejs
+      - name: Install Nodejs
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }} # 版本
+
+      # 第三步：依赖安装   
+      - name: Install Yarn
+        run: |
+          rm -rf ./node_modules
+          npm install -g yarn
+          yarn
+
+      # 第四步：打包构建
+      - name: Build
+        run: yarn build
+
+      # 第五步：部署到服务器
+      - name: Deploy to Server
+        run: |
+          chmod +x ./scripts/deploy.sh
+          bash ./scripts/deploy.sh
+        env: # 设置环境变量
+          GITHUB_TOKEN_DEPLOY: ${{secrets.ACCESS_TOKEN_DEPLOY}} # toKen私密变量
+          CODING_TOKEN_DEPLOY: ${{secrets.CODING_TOKEN_DEPLOY}} # 腾讯云开发者平台（coding）私密 token
+          GITEE_TOKEN_DEPLOY: ${{secrets.GITEE_TOKEN_DEPLOY}} # 码云私密 token
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist
+          GITHUB_CNAME: g.extend.roshin.cn
+          CODING_CNAME: extend.roshin.cn

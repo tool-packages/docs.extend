@@ -1,0 +1,76 @@
+{
+  "name": "extend.document",
+  "description": "@roshin/extend 文档",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vuepress dev src",
+    "build": "cross-env NODE_ENV=production vuepress build src",
+    "lint": "eslint --ext .js,.ts --ignore-path .eslintignore ./ --max-warnings 0",
+    "fix": "run-s fix:*",
+    "fix:lint": "eslint --ext \"./**/*{.ts,.js}?(x)\" --fix",
+    "fix:json": "prettier --write --parser json \"./**/*.json\"",
+    "fix:md": "prettier --write \"./**/*.md\"",
+    "preinstall": "node ./scripts/checkYarn.js",
+    "baiduPush": "node ./scripts/baiduPush.js",
+    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s",
+    "commit": "cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn changelog && git add ./CHANGELOG.md && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "./**/*{.ts,.js}?(x)": [
+      "yarn lint",
+      "yarn fix:lint"
+    ],
+    "./**/*.json": [
+      "yarn fix:json",
+      "git add"
+    ],
+    "./**/*.md": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vuepress/plugin-back-to-top": "^1.8.0",
+    "@vuepress/plugin-pwa": "^1.7.1",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.2",
+    "conventional-changelog-cli": "^2.1.1",
+    "core-js": "2",
+    "cross-env": "^7.0.3",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-vue": "^7.4.0",
+    "fs-extra": "^9.0.1",
+    "gray-matter": "^4.0.2",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "minimist": "^1.2.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-container": "^2.1.5",
+    "vuepress-plugin-nprogress": "^1.1.8",
+    "vuepress-theme-antdocs": "^1.2.2"
+  }
+}
