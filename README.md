@@ -33,17 +33,33 @@
 
 ## 介绍
 
-<!-- 我们希望能通过 `@roshin/extend` 学习了解到更多原生js所提供的的api，同时扩展部分 -->
+该站点基于 Vuepress 构建而成。网站内容在 src 文件夹内，格式为 Markdown。
 
-我们希望能在项目开发过程中更方便、省时，所以在原生 js 的基础上扩展了部分功能。希望对你在项目中有所帮助。
+代码仓库地址: [https://github.com/tool-packages/extend](https://github.com/tool-packages/extend)
 
-## 文档
+## 站点
 
-- [https://extend.roshin.cn/](https://extend.roshin.cn/)(国内源)
-- [https://g.extend.roshin.cn/](https://g.extend.roshin.cn/)(github 源)
+- [https://extend.roshin.cn/](https://extend.roshin.cn/) (国内源)
+- [https://g.extend.roshin.cn/](https://g.extend.roshin.cn/) (github 源)
 
-## 插件包
+## 部署
 
-所有插件包都保存在 `/packages` 目录中。
+本仓库使用的是 Github Actions 分支进行自动部署。
 
-- [validator](packages/validator) 检测器
+## 贡献
+
+目前网站处于维护状态，我们会定期同步更新文档。希望大家积极指正，可以通过提 [issue](https://github.com/tool-packages/docs.extend/issues) 的形式告知，也可以通过 [pull request](https://github.com/tool-packages/docs.extend/pulls) 的形式提交改正后的文档或代码。
+
+有劳在参与贡献之前先行了解相关以下注意事项：
+
+- [协作指南](https://github.com/tool-packages/docs.extend/.github/guide-convention.md)
+
+- [Git 消息提交规范](https://github.com/tool-packages/docs.extend/.github/commit-convention.md)
+
+最新的文档贡献情况可以参阅 GitHub 提供的 [contributors](packages/validator) 页面。
+
+## 许可证
+
+[MIT](https://github.com/tool-packages/docs.extend/blob/master/LICENSE)
+
+Copyright (c) 2020-present Roshin

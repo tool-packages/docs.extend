@@ -6,8 +6,8 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development vuepress dev src",
-    "build": "cross-env NODE_ENV=production vuepress build src",
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
     "lint": "eslint --ext .js,.ts --ignore-path .eslintignore ./ --max-warnings 0",
     "fix": "run-s fix:*",
     "fix:lint": "eslint --ext \"./**/*{.ts,.js}?(x)\" --fix",
@@ -54,7 +54,6 @@
     "commitizen": "^4.2.2",
     "conventional-changelog-cli": "^2.1.1",
     "core-js": "2",
-    "cross-env": "^7.0.3",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",

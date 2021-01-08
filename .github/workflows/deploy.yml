@@ -7,15 +7,15 @@ on:
   push:
     branches: [ master ]
     paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
-      - '!src/**'
+      - !src/**
     #   - README.md
     #   - LICENSE
   pull_request:
     branches: [ master ]
     paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
-      - '!src/**'
-    #   - README.md
-    #   - LICENSE
+      - !src/**
+      # - README.md
+      # - LICENSE
     
   # 允许您从 "Actions" 选项卡手动运行此工作流
   workflow_dispatch:

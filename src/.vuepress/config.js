@@ -37,8 +37,8 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     smoothScroll: true, // 启用页面滚动效果
-    repo: 'https://github.com/extend-js/extend', // 项目仓库
-    docsRepo: 'https://github.com/toolbox-js/extend.document', // 文档仓库
+    repo: 'https://github.com/tool-packages/extend', // 项目仓库
+    docsRepo: 'https://github.com/tool-packages/docs.extend', // 文档仓库
     docsDir: 'src',
     docsBranch: 'master',
     editLinks: true,
