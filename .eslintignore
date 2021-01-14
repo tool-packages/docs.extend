@@ -6,4 +6,4 @@
 **/coverage/*
 **/scripts-js/*
 !.vuepress
-!.remarkrc.js
+!.stylelintrc.js

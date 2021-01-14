@@ -1,6 +1,43 @@
 /**
  * 自定义样式
  */
+h4 {
+	font-weight bold !important;
+}
 
-.home .hero img
-  max-width 450px!important
+.custom-block {
+	padding: 0.1rem 1.5rem;
+	border-left-width: 0.4rem;
+	border-left-style: solid;
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+	margin: 1rem 0;
+
+	p {
+		color: #222222;
+	}
+
+	.custom-block-title {
+		font-weight: 600;
+		margin-bottom: -0.4rem;
+	}
+
+	&.msg {
+		border-left-width: 0;
+		background-color: #f8f8f8;
+	}
+}
+
+.theme-antdocs-content {
+	div[class*='language-'] pre,
+	table,
+	blockquote,
+	h4 + p {
+		margin: 1rem 0;
+	}
+
+	.code-copy-added .code-copy svg {
+		cursor pointer
+		z-index 1;
+	}
+}

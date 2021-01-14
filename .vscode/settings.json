@@ -84,7 +84,8 @@
   // 在保存时运行的代码操作类型。
   "editor.codeActionsOnSave": {
     "source.fixAll": true, // 控制是否应在文件保存时运行自动修复操作
-    "source.fixAll.eslint": true // 控制是否应在文件保存时通过eslint运行自动修复操作
+    "source.fixAll.eslint": true, // 控制是否应在文件保存时通过eslint运行自动修复操作
+    "source.fixAll.stylelint": true
   },
 
   /* ------ 代码格式检查 eslint ------ */
@@ -124,5 +125,11 @@
   },
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
   "js/ts.implicitProjectConfig.checkJs": true,
-  "typescript.suggest.completeFunctionCalls": true
+  "typescript.suggest.completeFunctionCalls": true,
+  "stylelint.customSyntax": "stylelint-plugin-stylus/custom-syntax",
+  "stylelint.validate": ["stylus"],
+  "textlint.run": "onType",
+  "textlint.autoFixOnSave": true,
+  "telemetry.enableCrashReporter": true,
+  "telemetry.enableTelemetry": true
 }

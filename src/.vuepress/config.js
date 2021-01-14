@@ -29,7 +29,7 @@ module.exports = {
       permalinkSymbol: '#'
     }
   },
-  theme: 'antdocs',
+  // theme: 'antdocs',
   // 为当前的主题提供一些配置
   themeConfig: {
     logo: '/logo.png',
@@ -73,6 +73,14 @@ module.exports = {
           message: '发现新内容可用',
           buttonText: '刷新'
         }
+      }
+    ],
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'info',
+        before: (info) => `<div class="custom-block info"><p class="custom-block-title">${info}</p>`,
+        after: '</div>'
       }
     ]
   ]

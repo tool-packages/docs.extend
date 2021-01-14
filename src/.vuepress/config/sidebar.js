@@ -10,14 +10,14 @@ module.exports = {
     {
       title: '内部使用',
       collapsable: false,
-      children: ['/api/internal/', '/api/internal/globals']
+      children: ['/api/internal/', '/api/internal/modules']
     }
   ],
   '/api/validator': [
     {
       title: '检测器',
       collapsable: false,
-      children: ['/api/validator/', '/api/validator/globals']
+      children: ['/api/validator/', '/api/validator/modules']
     }
   ]
 };

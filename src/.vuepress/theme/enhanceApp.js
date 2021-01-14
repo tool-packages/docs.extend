@@ -8,12 +8,4 @@
  * @param isServer 当前应用配置是处于 服务端渲染 或 客户端
  */
 
-export default ({ Vue /* , options, router, siteData, isServer */ }) => {
-  Vue.mixin({
-    computed: {
-      $title() {
-        return `${this.$siteTitle}-${this.$page.title}`;
-      }
-    }
-  });
-};
+// export default ({ Vue, options, router, siteData, isServer }) => {};

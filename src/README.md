@@ -12,10 +12,42 @@ actionLink: ./guide/introduction
 #   details: 省去了很多 js 自带的或者不常用的方法，并且改进和拓展了很多方法的使用方式。
 # - title: 模块
 #   details: 可以根据不同使用场景，选择适合场景的模块包安装。
-footer: MIT Licensed | Copyright © 2020-present roshin
+footerColumn: 2
+footerWrap:
+  - headline: 社区
+    items:
+      - title: Item 1
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+      - title: Item 2
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+  - headline: 社区
+    items:
+      - title: Item 1
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+      - title: Item 2
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+  - headline: 友情链接
+    items:
+      - title: Item 1
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+      - title: Item 2
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+  - headline: 关于作者
+    items:
+      - title: Item 1
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+      - title: Item 2
+        link: https://github.com/zpfz/vuepress-theme-antdocs
+        details: details
+footer: MIT Licensed | Copyright © 2020-present roshin | @roshin/extend's documentation
 ---
-
-<div class="badge"></div>
 
 <div class="features">
   <div class="feature">
