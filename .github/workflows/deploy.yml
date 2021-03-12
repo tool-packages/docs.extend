@@ -5,17 +5,18 @@ name: deploy
 on:
   # push 事件或 pull_request 事件都可以触发 workflow, 仅限 master 分支
   push:
-    branches: [ master ]
-    paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
-      - "!src/**"
-    #   - README.md
-    #   - LICENSE
+    branches:
+      - master
+    # paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
+    paths:   # 至少有一个路径与 paths 过滤器中的模式匹配
+      - "src/**"
+      - "scripts/**"
   pull_request:
-    branches: [ master ]
-    paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
-      - "!src/**"
-      # - README.md
-      # - LICENSE
+    branches:
+      - master
+    paths:
+      - "src/**"
+      - "scripts/**"
     
   # 允许您从 "Actions" 选项卡手动运行此工作流
   workflow_dispatch:
