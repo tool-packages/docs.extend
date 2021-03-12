@@ -72,6 +72,8 @@
     "stylelint-order": "^4.1.0",
     "stylelint-plugin-stylus": "^0.9.0",
     "vuepress": "^1.7.1",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
+    "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-nprogress": "^1.1.8",
