@@ -122,14 +122,14 @@
     "*.scss": "scss",
     "*.pss": "postcss",
     "*.js": "javascript"
-  },
-  "js/ts.implicitProjectConfig.experimentalDecorators": true,
-  "js/ts.implicitProjectConfig.checkJs": true,
-  "typescript.suggest.completeFunctionCalls": true,
-  "stylelint.customSyntax": "stylelint-plugin-stylus/custom-syntax",
-  "stylelint.validate": ["stylus"],
-  "textlint.run": "onType",
-  "textlint.autoFixOnSave": true,
-  "telemetry.enableCrashReporter": true,
-  "telemetry.enableTelemetry": true
+  }
+  // "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  // "js/ts.implicitProjectConfig.checkJs": true,
+  // "typescript.suggest.completeFunctionCalls": true,
+  // "stylelint.customSyntax": "stylelint-plugin-stylus/custom-syntax",
+  // "stylelint.validate": ["stylus"],
+  // "textlint.run": "onType",
+  // "textlint.autoFixOnSave": true,
+  // "telemetry.enableCrashReporter": true,
+  // "telemetry.enableTelemetry": true
 }
