@@ -8,10 +8,10 @@ on:
   # push: # push代码触发
   schedule: # 定时触发
     # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#scheduled-events-schedule
-    # - cron: '0 23 * * *' # 每天国际标准时间 23 点（北京时间 +8 即早上 7 点）运行
+    - cron: '0 23 * * *' # 每天国际标准时间 23 点（北京时间 +8 即早上 7 点）运行
     # - cron: '0 */2 * * *' # 每两个小时执行一次 https://crontab.guru/#0_*/2_*_*_*
     # - cron: '*/5 * * * *' # 每5分钟一次，测试用
-    - cron: '0 */12 * * *' # 每12个小时一次
+    # - cron: '0 */12 * * *' # 每12个小时一次
   # 允许您从 "Actions" 选项卡手动运行此工作流
   workflow_dispatch:
 
