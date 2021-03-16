@@ -21,7 +21,6 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn changelog && git add ./CHANGELOG.md && git commit -m \"chore: 更新日志\"",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
