@@ -1,6 +1,7 @@
 // const path = require('path');
 const sidebar = require('./config/sidebar.js');
 const nav = require('./config/nav.js');
+const dayjs = require('dayjs'); // 类似于 moment.js 的日期处理插件
 
 const keywords = ['Roshin', 'JavaScript', 'js', 'TypeScript', 'ts', 'extend'];
 
@@ -96,10 +97,7 @@ module.exports = {
     [
       '@vuepress/last-updated',
       {
-        transformer(timestamp) {
-          const dayjs = require('dayjs');
-          return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
-        }
+        transformer: (timestamp) => dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss')
       }
     ]
   ]
