@@ -4,12 +4,12 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/tool-packages/docs.extend/actions?query=workflow%3Adeploy">
-    <img src="https://github.com/tool-packages/docs.extend/workflows/deploy/badge.svg" alt="deploy" />
+  <a href="https://github.com/tool-packages/docs.extend/actions/workflows/deploy.yml">
+    <img src="https://github.com/tool-packages/docs.extend/actions/workflows/deploy.yml/badge.svg" alt="deploy" />
   </a>
 
-  <a href="https://github.com/tool-packages/docs.extend/actions?query=workflow%3AbaiduPush">
-    <img src="https://github.com/tool-packages/docs.extend/workflows/baiduPush/badge.svg" alt="baiduPush" />
+  <a href="https://github.com/tool-packages/docs.extend/actions/workflows/baiduPush.yml">
+    <img src="https://github.com/tool-packages/docs.extend/actions/workflows/baiduPush.yml/badge.svg" alt="baiduPush" />
   </a>
 
   <a href="https://github.com/tool-packages/docs.extend/blob/master/LICENSE">
@@ -39,8 +39,7 @@
 
 ## 站点
 
-- [https://extend.roshin.cn/](https://extend.roshin.cn/) (国内源)
-- [https://g.extend.roshin.cn/](https://g.extend.roshin.cn/) (github 源)
+- [https://extend.roshin.cn/](https://extend.roshin.cn/)
 
 ## 部署
 
@@ -56,7 +55,7 @@
 
 - [Git 消息提交规范](https://github.com/tool-packages/docs.extend/.github/commit-convention.md)
 
-最新的文档贡献情况可以参阅 GitHub 提供的 [contributors](packages/validator) 页面。
+<!-- 最新的文档贡献情况可以参阅 GitHub 提供的 [contributors](packages/validator) 页面。 -->
 
 ## 许可证
 
