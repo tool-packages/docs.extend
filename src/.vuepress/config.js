@@ -61,7 +61,7 @@ module.exports = {
   plugins: [
     'vuepress-plugin-baidu-autopush', // 百度自动推送
     // 百度统计
-    ['vuepress-plugin-baidu-tongji', { hm: '9b5f581c3a93e89e731b407638db384b' }],
+    ['vuepress-plugin-baidu-tongji', { hm: '586b6ffea19a4aa3ac5f2911bf05f290' }],
     'vuepress-plugin-nprogress',
     [
       'vuepress-plugin-code-copy',
